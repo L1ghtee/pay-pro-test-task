@@ -24,14 +24,23 @@ function validateForm() {
 
   if (isEmailValid) {
     emailMessage.style.display ='none';
+    emailInput.style.borderColor = '#D5DCE3'
+    emailInput.style.color = '#373747'
+
   } else {
     emailMessage.style.display ='flex';
+    emailInput.style.borderColor = '#DB4732'
+    emailInput.style.color = '#DB4732'
   }
 
   if (isConfirmationUrlValid) {
     confirmationUrlMessage.style.display ='none';
+    confirmationUrlInput.style.borderColor = '#D5DCE3'
+    confirmationUrlInput.style.color = '#373747'
   } else {
     confirmationUrlMessage.style.display ='flex';
+    confirmationUrlInput.style.borderColor = '#DB4732'
+    confirmationUrlInput.style.color = '#DB4732'
   }
 
   submitButton.disabled = !(isEmailValid && isConfirmationUrlValid);
