@@ -46,44 +46,20 @@ function validateForm() {
   submitButton.disabled = !(isEmailValid && isConfirmationUrlValid);
 }
 
-// function submitForm() {
-//     const email = document.getElementById('email').value;
-//     const confirmationUrl = document.getElementById('confirmationUrl').value;
+function submitForm() {
+    const email = document.getElementById('email').value;
+    const confirmationUrl = document.getElementById('confirmationUrl').value;
   
 
-//     if (email && confirmationUrl) {
+    if (email && confirmationUrl) {
    
-//       const link = `${confirmationUrl}?email=${encodeURIComponent(email)}`;
+      const link = `${confirmationUrl}?email=${encodeURIComponent(email)}`;
   
   
-//       window.open(link, '_blank');
-//     } else {
-//       alert('Please fill in both fields.');
-//     }
-//   }
-
-  const form = document.getElementById('emailForm');
-  const confirmationUrl = document.getElementById('confirmationUrl').value;
-form.addEventListener('submit', async function(event) {
-  event.preventDefault();
-
-  const formData = new FormData(form);
-  const apiURL = confirmationUrl; // Замініть на власне API посилання
-
-  try {
-    const response = await fetch(apiURL, {
-      method: 'POST',
-      body: formData
-    });
-
-    if (response.ok) {
-      console.log('Data successfully sent to the API');
-      // Додатковий код для обробки успішної відповіді
+      window.open(link, '_blank');
     } else {
-      console.error('Error sending data to the API');
-      // Додатковий код для обробки помилки
+      alert('Please fill in both fields.');
     }
-  } catch (error) {
-    console.error('An error occurred:', error);
   }
-});
+
+ 
