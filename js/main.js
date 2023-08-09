@@ -50,12 +50,12 @@ function submitForm() {
     const email = document.getElementById('email').value;
     const confirmationUrl = document.getElementById('confirmationUrl').value;
   
-    // Переконайтеся, що обидва поля мають значення
+
     if (email && confirmationUrl) {
-      // Створіть посилання з введеними даними
+   
       const link = `${confirmationUrl}?email=${encodeURIComponent(email)}`;
   
-      // Перенаправити користувача на створене посилання
+  
       window.open(link, '_blank');
     } else {
       alert('Please fill in both fields.');
